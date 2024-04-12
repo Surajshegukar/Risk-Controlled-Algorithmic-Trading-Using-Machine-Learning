@@ -74,8 +74,8 @@ def sell_all():
             order = client.submit_order(order_details)
             
 
-def sell(symbol, qty):
+def sell(symbol, qty = 1):
     order_details = MarketOrderRequest(symbol=symbol, qty=qty, side=OrderSide.SELL, time_in_force=TimeInForce.DAY)
     order = client.submit_order(order_details)
 
-sell("META", 10)
+# sell("META", 10)
